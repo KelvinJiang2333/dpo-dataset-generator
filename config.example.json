@@ -1,0 +1,44 @@
+{
+  "description": "大模型API配置示例文件",
+  "note": "请根据您的实际环境修改以下配置",
+  "configurations": {
+    "vllm_local": {
+      "name": "vLLM本地服务",
+      "api_url": "http://localhost:8000/v1",
+      "api_key": "your_vllm_api_key",
+      "model_name": "Qwen/Qwen2-7B-Instruct",
+      "temperature_a": 0.2,
+      "temperature_b": 1.0
+    },
+    "ollama_local": {
+      "name": "Ollama本地服务",
+      "api_url": "http://localhost:11434/v1", 
+      "api_key": "ollama",
+      "model_name": "qwen2:7b",
+      "temperature_a": 0.2,
+      "temperature_b": 1.0
+    },
+    "openai": {
+      "name": "OpenAI API",
+      "api_url": "https://api.openai.com/v1",
+      "api_key": "sk-your-openai-key-here",
+      "model_name": "gpt-3.5-turbo",
+      "temperature_a": 0.2,
+      "temperature_b": 1.0
+    },
+    "custom": {
+      "name": "自定义服务",
+      "api_url": "https://your-service.com/v1",
+      "api_key": "your-api-key",
+      "model_name": "your-model-name",
+      "temperature_a": 0.2,
+      "temperature_b": 1.0
+    }
+  },
+  "security_notes": [
+    "请不要在代码中硬编码API密钥",
+    "建议将敏感信息存储在环境变量中",
+    "生产环境中请使用HTTPS",
+    "定期轮换API密钥"
+  ]
+}

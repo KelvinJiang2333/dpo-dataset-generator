@@ -1,0 +1,11 @@
+# DPO数据集生成工具依赖包
+
+# Web框架
+Flask==2.3.3
+flask-cors==4.0.0
+
+# HTTP请求
+requests==2.31.0
+
+# JSON处理（Python内置，无需单独安装）
+# 其他标准库：os, datetime, json, typing 等（Python内置）
